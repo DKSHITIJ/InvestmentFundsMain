@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class InvestmentFundsMainApplication {
 	
 	//http://localhost:8080/services/fundsservice/totalfunds
+	//http://localhost:8080/v1/fundsservice/totalfunds
 	public static void main(String[] args) {
 		SpringApplication.run(InvestmentFundsMainApplication.class, args);
 	}
