@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.app1.db.InvestmentFundsDB;
 import com.app1.domain.Fund;
@@ -13,6 +14,7 @@ import com.app1.web.service.InvestmentFundsService;
 
 //http://www.mkyong.com/webservices/jax-rs/jax-rs-path-uri-matching-example/
 
+//@CrossOrigin
 @Component
 public class InvestmentFundsServiceImpl implements InvestmentFundsService {
 	public static final double NO_OF_YEARS = 20;
@@ -21,6 +23,7 @@ public class InvestmentFundsServiceImpl implements InvestmentFundsService {
 	@Autowired
 	InvestmentFundsDB investmentFundsDB;
 
+	//@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 	public List<Fund> getTotalFunds() {
 		addFunds();
 		List<Fund> funds = investmentFundsDB.getTotalFunds();
