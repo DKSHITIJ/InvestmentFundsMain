@@ -6,8 +6,10 @@ package com.app1.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication(scanBasePackages = { "com.app1" })
+@EnableDiscoveryClient
 public class InvestmentFundsMainApplication {
 	
 	//http://localhost:8080/services/fundsservice/totalfunds
