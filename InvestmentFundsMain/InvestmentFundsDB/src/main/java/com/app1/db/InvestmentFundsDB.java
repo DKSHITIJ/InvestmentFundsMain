@@ -27,4 +27,9 @@ public class InvestmentFundsDB {
 	public List<Fund> getTotalFunds() {
 		return funds;
 	}
+	
+	public List<Fund> addAndGetTotalFunds() {
+		addFunds();
+		return getTotalFunds();
+	}
 }

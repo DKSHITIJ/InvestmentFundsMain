@@ -68,7 +68,7 @@ public class InvestmentFundsServiceImpl implements InvestmentFundsService {
 		return totalFunds;
 	}
 
-	private static void updateTotalFundDetails(Fund f) {
+	private void updateTotalFundDetails(Fund f) {
 		StringBuilder fundString = new StringBuilder();
 		fundString.append(f.getFundName() + "........\n");
 		fundString.append("Amount invested every month : "
