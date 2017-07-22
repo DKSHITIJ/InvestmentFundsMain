@@ -28,7 +28,8 @@ public class InvestmentFundsServiceImpl implements InvestmentFundsService {
 		addFunds();
 		List<Fund> funds = investmentFundsDB.getTotalFunds();
 		funds = calculateFunds(funds);
-		return funds.toArray(new Fund[funds.size()]);
+		Fund[] fundsArray = new Fund[funds.size()];
+		return funds.toArray(fundsArray);
 	}
 
 	public void addFunds() {

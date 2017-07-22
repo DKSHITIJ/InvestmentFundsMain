@@ -10,6 +10,10 @@ public class Fund {
 	private double fundAmount;
 	private String totalFundDetails;
 
+	public Fund() {
+     super();		
+	}
+	
 	public Fund(String fundName, double monthyFundAmount, double interstRate, String goal) {
 		super();
 		this.monthlyFundAmount = monthyFundAmount;
