@@ -19,9 +19,9 @@ public class InvestmentFundsDB {
 	
 	public void addFunds() {
 		funds.add(new Fund("Employee Provident Fund", 10000, 7, "Retirement", noOfNumbers));
-		funds.add(new Fund("Public Provident Fund", 10000, 7, "Retirement", noOfNumbers));
+		//funds.add(new Fund("Public Provident Fund", 10000, 7, "Retirement", noOfNumbers));
 		//funds.add(new Fund("Fixed Deposit", 10000, 6, "Retirement", noOfNumbers));
-		funds.add(new Fund("Mutual Fund", 40000, 15, "Retirement", noOfNumbers));
+		funds.add(new Fund("Mutual Fund", 50000, 15, "Retirement", noOfNumbers));
 	}
 	
 	public List<Fund> getTotalFunds() {
