@@ -24,10 +24,11 @@ public class InvestmentFundsServiceImpl implements InvestmentFundsService {
 	InvestmentFundsDB investmentFundsDB;
 
 	//@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
-	public List<Fund> getTotalFunds() {
+	public Fund[] getTotalFunds() {
 		addFunds();
 		List<Fund> funds = investmentFundsDB.getTotalFunds();
-		return calculateFunds(funds);
+		funds = calculateFunds(funds);
+		return funds.toArray(new Fund[funds.size()]);
 	}
 
 	public void addFunds() {

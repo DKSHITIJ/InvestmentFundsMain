@@ -1,7 +1,5 @@
 package com.app1.web.service;
 
-import java.util.List;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -18,6 +16,6 @@ public interface InvestmentFundsService {
 	
 	@GET
 	@Path("/totalfunds")
-	public List<Fund> getTotalFunds() ;
+	public Fund[] getTotalFunds() ;
 
 }
