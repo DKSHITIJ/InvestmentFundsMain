@@ -83,7 +83,7 @@ public class InvestmentFundsServiceImpl implements InvestmentFundsService {
 		fundString.append("Final Amount                : "
 				+ NUMBER_FORMAT.format(f.getFundAmount()) + "\n");
 		fundString.append("Annualised Returns          : "
-				+ NUMBER_FORMAT.format(f.getInterstRate()) + "\n");
+				+ NUMBER_FORMAT.format(f.getInterestRate()) + "\n");
 		fundString
 				.append("------------------------------------------------------");
 

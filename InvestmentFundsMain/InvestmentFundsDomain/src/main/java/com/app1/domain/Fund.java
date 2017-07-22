@@ -2,7 +2,7 @@ package com.app1.domain;
 
 public class Fund {
 	private double monthlyFundAmount;
-	private double interstRate;
+	private double interestRate;
 	private String fundName;
 	private String goal;
 	//private double noOfYears = FundCalculator.NO_OF_YEARS;
@@ -13,7 +13,7 @@ public class Fund {
 	public Fund(String fundName, double monthyFundAmount, double interstRate, String goal) {
 		super();
 		this.monthlyFundAmount = monthyFundAmount;
-		this.interstRate = interstRate;
+		this.interestRate = interstRate;
 		this.fundName = fundName;
 		this.goal = goal;
 	}
@@ -21,7 +21,7 @@ public class Fund {
 	public Fund(String fundName, double monthyFundAmount, double interstRate, String goal, double noOfYears) {
 		super();
 		this.monthlyFundAmount = monthyFundAmount;
-		this.interstRate = interstRate;
+		this.interestRate = interstRate;
 		this.fundName = fundName;
 		this.goal = goal;
 		this.noOfYears = noOfYears;
@@ -39,11 +39,11 @@ public class Fund {
 		return monthlyFundAmount;
 	}
 
-	public double getInterstRate() {
-		if(interstRate <= 0) {
-			interstRate = (Math.pow((getFundAmount()/(monthlyFundAmount * 12 * noOfYears)), (1/(noOfYears-1))) - 1) * 100;
+	public double getInterestRate() {
+		if(interestRate <= 0) {
+			interestRate = (Math.pow((getFundAmount()/(monthlyFundAmount * 12 * noOfYears)), (1/(noOfYears-1))) - 1) * 100;
 		}
-		return interstRate;
+		return interestRate;
 	}
 
 	public String getFundName() {
@@ -64,7 +64,7 @@ public class Fund {
 
 			for (int i = 1; i <= noOfYears; i++) {
 				fundAmount = fundAmount + (monthlyFundAmount * 12);
-				interstAmount = fundAmount * (interstRate / 100);
+				interstAmount = fundAmount * (interestRate / 100);
 				fundAmount = Math.round(fundAmount + interstAmount);
 			}
 		}

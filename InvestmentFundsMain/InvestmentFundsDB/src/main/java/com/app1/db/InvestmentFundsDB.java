@@ -10,6 +10,7 @@ import com.app1.domain.Fund;
 @Repository
 public class InvestmentFundsDB {
 
+	private double noOfNumbers = 20;
 	public InvestmentFundsDB() {
 		super();
 	}
@@ -17,11 +18,10 @@ public class InvestmentFundsDB {
 	List<Fund> funds = new ArrayList<>();
 	
 	public void addFunds() {
-		funds.add(new Fund("Employee Provident Fund", 10000, 10, "Retirement"));
-		funds.add(new Fund("Public Provident Fund", 10000, 10, "Retirement"));
-		funds.add(new Fund("Fixed Deposit", 10000, 10, "Retirement"));
-		funds.add(new Fund("Mutual Fund", 20000, 10, "Retirement"));
-		funds.add(new Fund("TESTING", 50, 10, "Retirement", 4));
+		funds.add(new Fund("Employee Provident Fund", 10000, 7, "Retirement", noOfNumbers));
+		funds.add(new Fund("Public Provident Fund", 10000, 7, "Retirement", noOfNumbers));
+		//funds.add(new Fund("Fixed Deposit", 10000, 6, "Retirement", noOfNumbers));
+		funds.add(new Fund("Mutual Fund", 40000, 15, "Retirement", noOfNumbers));
 	}
 	
 	public List<Fund> getTotalFunds() {
